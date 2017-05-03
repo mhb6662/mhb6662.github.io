@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/jianxinguo1992.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jianxinguo1992.github.io/" rel="alternate" type="text/html" /><updated>2017-05-03T14:44:20+08:00</updated><id>http://localhost:4000/jianxinguo1992.github.io/</id><title type="html">Xin Blog</title><subtitle>Write your site description here. It will be used as your sites meta description as well!</subtitle><entry><title type="html">聊聊Socket、TCP/IP、HTTP、FTP及网络编程</title><link href="http://localhost:4000/jianxinguo1992.github.io/2017/04/15/%E8%81%8A%E8%81%8ASocket-TCP-IP-HTTP-FTP%E5%8F%8A%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" rel="alternate" type="text/html" title="聊聊Socket、TCP/IP、HTTP、FTP及网络编程" /><published>2017-04-15T19:00:00+08:00</published><updated>2017-04-15T19:00:00+08:00</updated><id>http://localhost:4000/jianxinguo1992.github.io/2017/04/15/%E8%81%8A%E8%81%8ASocket%E3%80%81TCP-IP%E3%80%81HTTP%E3%80%81FTP%E5%8F%8A%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/jianxinguo1992.github.io/2017/04/15/%E8%81%8A%E8%81%8ASocket-TCP-IP-HTTP-FTP%E5%8F%8A%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">&lt;p&gt;##这些都是什么
-既然是网络传输，涉及几个系统之间的交互，那么首先要考虑的是如何准确的定位到网络上的一台或几台主机，另一个是如何进行可靠高效的数据传输。&lt;code class=&quot;highlighter-rouge&quot;&gt;这里就要使用到TCP/IP协议。&lt;/code&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/jianxinguo1992.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/jianxinguo1992.github.io/" rel="alternate" type="text/html" /><updated>2017-05-03T14:53:15+08:00</updated><id>http://localhost:4000/jianxinguo1992.github.io/</id><title type="html">Xin Blog</title><subtitle>Write your site description here. It will be used as your sites meta description as well!</subtitle><entry><title type="html">聊聊Socket、TCP/IP、HTTP、FTP及网络编程</title><link href="http://localhost:4000/jianxinguo1992.github.io/2017/04/15/%E8%81%8A%E8%81%8ASocket-TCP-IP-HTTP-FTP%E5%8F%8A%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" rel="alternate" type="text/html" title="聊聊Socket、TCP/IP、HTTP、FTP及网络编程" /><published>2017-04-15T19:00:00+08:00</published><updated>2017-04-15T19:00:00+08:00</updated><id>http://localhost:4000/jianxinguo1992.github.io/2017/04/15/%E8%81%8A%E8%81%8ASocket%E3%80%81TCP-IP%E3%80%81HTTP%E3%80%81FTP%E5%8F%8A%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/jianxinguo1992.github.io/2017/04/15/%E8%81%8A%E8%81%8ASocket-TCP-IP-HTTP-FTP%E5%8F%8A%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">&lt;h2 class=&quot;section-heading&quot;&gt;这些都是什么&lt;/h2&gt;
+&lt;p&gt;既然是网络传输，涉及几个系统之间的交互，那么首先要考虑的是如何准确的定位到网络上的一台或几台主机，另一个是如何进行可靠高效的数据传输。&lt;code class=&quot;highlighter-rouge&quot;&gt;这里就要使用到TCP/IP协议。&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;##1.1 TCP/IP协议组
-&lt;code class=&quot;highlighter-rouge&quot;&gt;TCP/IP协议（传输控制协议）由网络层的IP协议和传输层的TCP协议组成。&lt;/code&gt;&lt;/p&gt;
+&lt;h2 class=&quot;section-heading&quot;&gt;1.1 TCP/IP协议组&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TCP/IP协议（传输控制协议）由网络层的IP协议和传输层的TCP协议组成。&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;IP层负责网络主机的定位，数据传输的路由，有IP地址可以唯一的确定Internet上的一台主机。
 
@@ -21,8 +21,8 @@ TCP层负者面向应用的可靠的或非可靠的传输机制，这就是网�
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP是应用层协议，其传输都是被包装成TCP协议传输。可以用socket实现HTTP。socket是实现传输层协议的一种编程API，可以是TCP，也可以是UDP&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;##1.2 TCP
-&lt;code class=&quot;highlighter-rouge&quot;&gt;TCP --- 传输控制协议，提供的是面向连接、可靠的字节流服务。&lt;/code&gt;当客户端和服务器端彼此交换数据前，必须现在双方之间建立一个TCP连接，之后才能传输数据。TCP提供超时重发，丢弃重复数据，检验数据，流量控制等功能，保证数据能从一端传到另一端。理想状态下，TCP链接一旦建立，在通信双方中的任何一方主动关闭连接前，TCP连接都将被一直保持下去。断开接连时服务器和客户端均可以主动发起断开TCP连接的请求。
+&lt;h2 class=&quot;section-heading&quot;&gt;1.2 TCP&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TCP --- 传输控制协议，提供的是面向连接、可靠的字节流服务。&lt;/code&gt;当客户端和服务器端彼此交换数据前，必须现在双方之间建立一个TCP连接，之后才能传输数据。TCP提供超时重发，丢弃重复数据，检验数据，流量控制等功能，保证数据能从一端传到另一端。理想状态下，TCP链接一旦建立，在通信双方中的任何一方主动关闭连接前，TCP连接都将被一直保持下去。断开接连时服务器和客户端均可以主动发起断开TCP连接的请求。
 &lt;code class=&quot;highlighter-rouge&quot;&gt;TCP是一种面向连接的保证可靠传输的协议。&lt;/code&gt;通过TCP协议传输，得到的是一个顺序的无差错的数据流。发送方和接收方的成对的两个socket之间必须建立连接，以便在TCP协议的基础上进行通信，当一个socket（通常是server socket）等待建立连接时，另一个socket可以要求进行连接，一旦这个两个socket连接起来，它们就可以进行双向数据传输，双方都可以进行发送或接受操作。&lt;/p&gt;
 
 &lt;p&gt;TCP特点：&lt;/p&gt;
@@ -49,8 +49,8 @@ TCP层负者面向应用的可靠的或非可靠的传输机制，这就是网�
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TCP在网络通信上游极强的生命力&lt;/code&gt;，例如远程连接（Telnet）和文件传输（FTP）都需要不定长读的数据被可靠地传输。&lt;code class=&quot;highlighter-rouge&quot;&gt;但是可靠的传输是要付出代价的，对书序内容正确性的检验必然占用计算机的处理时间和网络的带宽&lt;/code&gt;，因此TCP传输的效率不如UDP高。&lt;/p&gt;
 
-&lt;p&gt;##1.3 UDP
-&lt;code class=&quot;highlighter-rouge&quot;&gt;UDP：用户数据报协议，是一个无连接的简单的面型数据报的传输层协议。&lt;/code&gt;UDP不提供可靠性，它只是把应用程序传给IP层的数据报发送出去，但是并不能保证它们能到达目的地。由于UDP在传输数据报前不用在客户和服务器之间建立一个连接，且没有超时重发等机制，故而传输速度很快。&lt;/p&gt;
+&lt;h2 class=&quot;section-heading&quot;&gt;1.3 UDP&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;UDP：用户数据报协议，是一个无连接的简单的面型数据报的传输层协议。&lt;/code&gt;UDP不提供可靠性，它只是把应用程序传给IP层的数据报发送出去，但是并不能保证它们能到达目的地。由于UDP在传输数据报前不用在客户和服务器之间建立一个连接，且没有超时重发等机制，故而传输速度很快。&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;UDP是一种面向无连接的协议，每个数据报都是一个独立的信息，&lt;/code&gt;包括完整的源地址或目的地址，它在网络上以任何可能的路径传往目的地，&lt;code class=&quot;highlighter-rouge&quot;&gt;因此能否到达目的地，到达目的地的时间以及内容的正确性都是不能被保证的。&lt;/code&gt;&lt;/p&gt;
 
@@ -68,8 +68,8 @@ TCP层负者面向应用的可靠的或非可靠的传输机制，这就是网�
 
 &lt;p&gt;UDP操作简单，而且仅需较少的监护，因此通常用于局域网高可靠性的分散系统中c/s应用程序。例如视频会议系统，并不需要音频数据绝对的正确，只要保证连贯性就可以了，这种情况下显然使用UDP会更合理一些。&lt;/p&gt;
 
-&lt;p&gt;##1.4 socket
-&lt;code class=&quot;highlighter-rouge&quot;&gt;socket通常也称作套接字，用于描述IP地址和端口，是一个通信链的句柄。&lt;/code&gt;网络上的二个程序通过一个双向的通讯连接实现数据的交换，这个双链路的一端为一个socket，&lt;code class=&quot;highlighter-rouge&quot;&gt;一个socket由一个IP地址和一个端口号唯一确定。&lt;/code&gt;应用程序通常通过socket向网络发出请求或者应答网络请求。Socket是TCP/IP协议的一个十分流行的编程界面，但是，socket所支持的协议种类也不光TCP/IP一种，因此两者之间没有必然联系。在java环境下，socket编程主要是指基于TCP/IP协议的网络编程。&lt;/p&gt;
+&lt;h2 class=&quot;section-heading&quot;&gt;1.4 socket&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;socket通常也称作套接字，用于描述IP地址和端口，是一个通信链的句柄。&lt;/code&gt;网络上的二个程序通过一个双向的通讯连接实现数据的交换，这个双链路的一端为一个socket，&lt;code class=&quot;highlighter-rouge&quot;&gt;一个socket由一个IP地址和一个端口号唯一确定。&lt;/code&gt;应用程序通常通过socket向网络发出请求或者应答网络请求。Socket是TCP/IP协议的一个十分流行的编程界面，但是，socket所支持的协议种类也不光TCP/IP一种，因此两者之间没有必然联系。在java环境下，socket编程主要是指基于TCP/IP协议的网络编程。&lt;/p&gt;
 
 &lt;p&gt;socket通讯过程：服务端监听某个端口是否连接请求，客户端向服务器端发送连接请求，服务端收到连接请求向客户端发出接收消息，这样一个连接就建立起来了。客户端和服务端都可以相互发送消息与对方进行通讯。&lt;/p&gt;
 
@@ -103,8 +103,8 @@ TCP层负者面向应用的可靠的或非可靠的传输机制，这就是网�
 &lt;p&gt;适用情况
 很多情况下，需要服务器端主动向客户端推送数据，保持客户端与服务器数据的实时与同步。此时若双方简历的是socket连接，服务器就可以直接将数据传送给客户端。&lt;/p&gt;
 
-&lt;p&gt;1.5 http
-``http协议是建立在TCP协议之上的一种应用，http连接使用的是请求-响应的方式，不仅在请求时需要先建立TCP连接，而且需要客户端向服务器发出请求后，请求中包含请求方法、url。协议版本以及相关的MIME样式的消息，服务器端才能回复数据，包含消息的协议版本、一个成功和失败码以及相关的MIME式样的消息。在请求结束后，会主动释放连接。从建立连接到关闭连接的过程称为一次连接。由于HTTP在每次请求结束后都会主动释放连接，因此HTTP连接是一种短连接，要保持客户端程序的在线状态，需要不断地想服务器发起连接请求。通常的做法是即时不需要获得任何数据，客户端也保持每隔一段固定时间向服务器发送一次保持连接的请求，服务器在受到请求后对客户端进行回复，表面知道客户端在线。弱服务器长时间无法受到客户端请求，则认为客户端下线，若客户端长时间无法收到服务器的回复，则认为网络已经断开。&lt;/p&gt;
+&lt;h2 class=&quot;section-heading&quot;&gt;1.5 http&lt;/h2&gt;
+&lt;p&gt;``http协议是建立在TCP协议之上的一种应用，http连接使用的是请求-响应的方式，不仅在请求时需要先建立TCP连接，而且需要客户端向服务器发出请求后，请求中包含请求方法、url。协议版本以及相关的MIME样式的消息，服务器端才能回复数据，包含消息的协议版本、一个成功和失败码以及相关的MIME式样的消息。在请求结束后，会主动释放连接。从建立连接到关闭连接的过程称为一次连接。由于HTTP在每次请求结束后都会主动释放连接，因此HTTP连接是一种短连接，要保持客户端程序的在线状态，需要不断地想服务器发起连接请求。通常的做法是即时不需要获得任何数据，客户端也保持每隔一段固定时间向服务器发送一次保持连接的请求，服务器在受到请求后对客户端进行回复，表面知道客户端在线。弱服务器长时间无法受到客户端请求，则认为客户端下线，若客户端长时间无法收到服务器的回复，则认为网络已经断开。&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP/1.0为每一次HTTP的请求/响应建立一条新的TCP链接，因此一个包含HTML内容和图片的页面将需要建立了多次的短期的TCP链接。&lt;/code&gt;一次TCP链接的建立将需要3次握手。&lt;/p&gt;
 
@@ -116,9 +116,9 @@ TCP层负者面向应用的可靠的或非可靠的传输机制，这就是网�
 
 &lt;p&gt;若双方建立的是HTTP连接，则服务器需要等到客户端发送一次请求后才能将数据传回给客户端，因此，客户端定时向服务器端发送连接请求，不仅可以保持在线，同时也是在询问服务器是否有新的数据，如果有就将数据传给客户端。&lt;/p&gt;
 
-&lt;p&gt;1.6 FTP&lt;/p&gt;
+&lt;h2 class=&quot;section-heading&quot;&gt;1.6 FTP&lt;/h2&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;文件传输协议是TCP/IP网络上两台计算机传送文件的协议，FTP是在TCP/IP网络和internet上最早使用的协议之一，它属于网络协议组的应用层。FTP客户机可以给服务器发出命令来下载文件，上传文件，创建或改变服务器上的目录。&lt;/code&gt;&lt;/p&gt;</content><author><name>Jianxin Guo</name></author><summary type="html">##这些都是什么 既然是网络传输，涉及几个系统之间的交互，那么首先要考虑的是如何准确的定位到网络上的一台或几台主机，另一个是如何进行可靠高效的数据传输。这里就要使用到TCP/IP协议。</summary></entry><entry><title type="html">同步、异步、阻塞、非阻塞</title><link href="http://localhost:4000/jianxinguo1992.github.io/2017/03/30/%E5%90%8C%E6%AD%A5-%E5%BC%82%E6%AD%A5-%E9%98%BB%E5%A1%9E-%E9%9D%9E%E9%98%BB%E5%A1%9E/" rel="alternate" type="text/html" title="同步、异步、阻塞、非阻塞" /><published>2017-03-30T19:00:00+08:00</published><updated>2017-03-30T19:00:00+08:00</updated><id>http://localhost:4000/jianxinguo1992.github.io/2017/03/30/%20%E5%90%8C%E6%AD%A5%E3%80%81%E5%BC%82%E6%AD%A5%E3%80%81%E9%98%BB%E5%A1%9E%E3%80%81%E9%9D%9E%E9%98%BB%E5%A1%9E</id><content type="html" xml:base="http://localhost:4000/jianxinguo1992.github.io/2017/03/30/%E5%90%8C%E6%AD%A5-%E5%BC%82%E6%AD%A5-%E9%98%BB%E5%A1%9E-%E9%9D%9E%E9%98%BB%E5%A1%9E/">&lt;p&gt;近来遇到了一些常见的概念，尤其是网络编程方面的概念，如：阻塞、非阻塞、异步I/O等等，对于这些概念自己也没有太清晰的认识，只是很模糊的概念，说了解吧也了解，但是要让自己准确的描述概念方面的具体细节，却说的不那么准确，这也是自己在这几个方面也没有细细考究过的原因吧。经过看了些这几个概念的资料，发现同步、异步、阻塞、非阻塞的概念其实也并不难以理解，在此写下此文，欢迎拍砖，希望多多交流。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;文件传输协议是TCP/IP网络上两台计算机传送文件的协议，FTP是在TCP/IP网络和internet上最早使用的协议之一，它属于网络协议组的应用层。FTP客户机可以给服务器发出命令来下载文件，上传文件，创建或改变服务器上的目录。&lt;/code&gt;&lt;/p&gt;</content><author><name>Jianxin Guo</name></author><summary type="html">这些都是什么 既然是网络传输，涉及几个系统之间的交互，那么首先要考虑的是如何准确的定位到网络上的一台或几台主机，另一个是如何进行可靠高效的数据传输。这里就要使用到TCP/IP协议。</summary></entry><entry><title type="html">同步、异步、阻塞、非阻塞</title><link href="http://localhost:4000/jianxinguo1992.github.io/2017/03/30/%E5%90%8C%E6%AD%A5-%E5%BC%82%E6%AD%A5-%E9%98%BB%E5%A1%9E-%E9%9D%9E%E9%98%BB%E5%A1%9E/" rel="alternate" type="text/html" title="同步、异步、阻塞、非阻塞" /><published>2017-03-30T19:00:00+08:00</published><updated>2017-03-30T19:00:00+08:00</updated><id>http://localhost:4000/jianxinguo1992.github.io/2017/03/30/%20%E5%90%8C%E6%AD%A5%E3%80%81%E5%BC%82%E6%AD%A5%E3%80%81%E9%98%BB%E5%A1%9E%E3%80%81%E9%9D%9E%E9%98%BB%E5%A1%9E</id><content type="html" xml:base="http://localhost:4000/jianxinguo1992.github.io/2017/03/30/%E5%90%8C%E6%AD%A5-%E5%BC%82%E6%AD%A5-%E9%98%BB%E5%A1%9E-%E9%9D%9E%E9%98%BB%E5%A1%9E/">&lt;p&gt;近来遇到了一些常见的概念，尤其是网络编程方面的概念，如：阻塞、非阻塞、异步I/O等等，对于这些概念自己也没有太清晰的认识，只是很模糊的概念，说了解吧也了解，但是要让自己准确的描述概念方面的具体细节，却说的不那么准确，这也是自己在这几个方面也没有细细考究过的原因吧。经过看了些这几个概念的资料，发现同步、异步、阻塞、非阻塞的概念其实也并不难以理解，在此写下此文，欢迎拍砖，希望多多交流。&lt;/p&gt;
 
 &lt;h2 class=&quot;section-heading&quot;&gt;1 同步与异步&lt;/h2&gt;
 
