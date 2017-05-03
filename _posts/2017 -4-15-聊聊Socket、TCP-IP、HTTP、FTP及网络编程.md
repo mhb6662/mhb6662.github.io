@@ -1,5 +1,12 @@
-# 聊聊Socket、TCP/IP、HTTP、FTP及网络编程
 
+---
+layout:     post
+title:      "聊聊Socket、TCP/IP、HTTP、FTP及网络编程"
+subtitle:   "从知道不知道到知道知道。"
+date:       2017-04-15 11:00:00
+author:     "Jianxin Guo"
+header-img: "img/post-bg-01.jpg"
+---
 ##这些都是什么
 既然是网络传输，涉及几个系统之间的交互，那么首先要考虑的是如何准确的定位到网络上的一台或几台主机，另一个是如何进行可靠高效的数据传输。``这里就要使用到TCP/IP协议。``
 
