@@ -57,8 +57,8 @@ ClassPathXmlApplicationContext用于加载CLASSPATH下的Spring配置文件，�
 3、refresh()
 
 　 这个就是整个Spring Bean加载的核心了，它是ClassPathXmlApplicationContext的父类AbstractApplicationContext的一个方法，顾名思义，用于刷新整个Spring上下文信息，定义了整个Spring上下文加载的流程。
-　　　　
-refresh方法
+
+
 
 上面已经说了，refresh()方法是整个Spring Bean加载的核心，因此看一下整个refresh()方法的定义：
 
@@ -123,20 +123,21 @@ refresh方法
 
 　　2、尽管加锁可以看到是针对整个方法体的，但是没有在方法前加synchronized关键字，而使用了对象锁startUpShutdownMonitor，这样做有两个好处：
 
-　　　　（1）refresh()方法和close()方法都使用了startUpShutdownMonitor对象锁加锁，这就保证了在调用refresh()方法的时候无法调用close()方法，反之亦然，避免了冲突
+　　（1）refresh()方法和close()方法都使用了startUpShutdownMonitor对象锁加锁，这就保证了在调用refresh()方法的时候无法调用close()方法，反之亦然，避免了冲突
 
-　　　　（2）另外一个好处不在这个方法中体现，但是提一下，使用对象锁可以减小了同步的范围，只对不能并发的代码块进行加锁，提高了整体代码运行的效率
+　　（2）另外一个好处不在这个方法中体现，但是提一下，使用对象锁可以减小了同步的范围，只对不能并发的代码块进行加锁，提高了整体代码运行的效率
 
 　　3、方法里面使用了每个子方法定义了整个refresh()方法的流程，使得整个方法流程清晰易懂。这点是非常值得学习的，一个方法里面几十行甚至上百行代码写在一起，在我看来会有三个显著的问题：
 
-　　　　（1）扩展性降低。反过来讲，假使把流程定义为方法，子类可以继承父类，可以根据需要重写方法
+ 　（1）扩展性降低。反过来讲，假使把流程定义为方法，子类可以继承父类，可以根据需要重写方法
 
-　　　　（2）代码可读性差。很简单的道理，看代码的人是愿意看一段500行的代码，还是愿意看10段50行的代码？
+ 　（2）代码可读性差。很简单的道理，看代码的人是愿意看一段500行的代码，还是愿意看10段50行的代码？
+　 （3）代码可维护性差。这点和上面的类似但又有不同，可维护性差的意思是，一段几百行的代码，功能点不明确，不易后人修改，可能会导致“牵一发而动全身”。
+　　　　
 
-　　　　（3）代码可维护性差。这点和上面的类似但又有不同，可维护性差的意思是，一段几百行的代码，功能点不明确，不易后人修改，可能会导致“牵一发而动全身”
+
 　　　　
-　　　　
-prepareRefresh方法
+prepareRefresh方法：
 
 下面挨个看refresh方法中的子方法，首先是prepareRefresh方法，看一下源码：
 
@@ -159,13 +160,13 @@ prepareRefresh方法
 ```
 这个方法功能比较简单，顾名思义，准备刷新Spring上下文，其功能注释上写了：
 
-1、设置一下刷新Spring上下文的开始时间
+1、设置一下刷新Spring上下文的开始时间。
 
-2、将active标识位设置为true
+2、将active标识位设置为true。
 
 另外可以注意一下12行这句日志，这句日志打印了真正加载Spring上下文的Java类。
 
-obtainFreshBeanFactory方法
+obtainFreshBeanFactory方法：
 
 obtainFreshBeanFactory方法的作用是获取刷新Spring上下文的Bean工厂，其代码实现为：
 
