@@ -17,8 +17,7 @@ header-img: "img/post-bg-01.jpg"
 ClassPathXmlApplicationContext用于加载CLASSPATH下的Spring配置文件，可以看到，第二行就已经可以获取到Bean的实例了，那么必然第一行就已经完成了对所有Bean实例的加载，因此可以通过ClassPathXmlApplicationContext作为入口。为了后面便于代码阅读，先给出一下ClassPathXmlApplicationContext这个类的继承关系：
 
 <a href="#">
-    <img src="{{ site.baseurl }}/img/
-spring01-01.png" alt="Post Sample Image">
+    <img src="{{ site.baseurl }}/img/spring01-01.png" alt="Post Sample Image">
 </a>
 
 看下ClassPathXmlApplicationContext的构造函数：
@@ -209,8 +208,7 @@ obtainFreshBeanFactory方法的作用是获取刷新Spring上下文的Bean工厂
 这段代码的核心是第7行，这行点出了DefaultListableBeanFactory这个类，这个类是构造Bean的核心类，这个类的功能会在下一篇文章中详细解读，首先给出DefaultListableBeanFactory的继承关系图：
 
 <a href="#">
-    <img src="{{ site.baseurl }}/img/
-spring01-02.png" alt="Post Sample Image">
+    <img src="{{ site.baseurl }}/img/spring01-02.png" alt="Post Sample Image">
 </a>
 
 
