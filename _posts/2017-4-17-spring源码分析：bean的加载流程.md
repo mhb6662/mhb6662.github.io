@@ -42,21 +42,21 @@ ClassPathXmlApplicationContext用于加载CLASSPATH下的Spring配置文件，�
 
 从第二段代码看，总共就做了三件事：
 
-　　1、super(parent)
+1、super(parent)
 
-　　　　没什么太大的作用，设置一下父级ApplicationContext，这里是null
+　　没什么太大的作用，设置一下父级ApplicationContext，这里是null
 
-　　2、setConfigLocations(configLocations)
+2、setConfigLocations(configLocations)
 
-　　　　代码就不贴了，一看就知道，里面做了两件事情：
+　　代码就不贴了，一看就知道，里面做了两件事情：
 
-　　　　（1）将指定的Spring配置文件的路径存储到本地
+　（1）将指定的Spring配置文件的路径存储到本地
 
-　　　　（2）解析Spring配置文件路径中的${PlaceHolder}占位符，替换为系统变量中PlaceHolder对应的Value值，System本身就自带一些系统变量比如class.path、os.name、user.dir等，也可以通过System.setProperty()方法设置自己需要的系统变量
+　（2）解析Spring配置文件路径中的${PlaceHolder}占位符，替换为系统变量中PlaceHolder对应的Value值，System本身就自带一些系统变量比如class.path、os.name、user.dir等，也可以通过System.setProperty()方法设置自己需要的系统变量
 
-　　3、refresh()
+3、refresh()
 
-　　　　这个就是整个Spring Bean加载的核心了，它是ClassPathXmlApplicationContext的父类AbstractApplicationContext的一个方法，顾名思义，用于刷新整个Spring上下文信息，定义了整个Spring上下文加载的流程。
+　 这个就是整个Spring Bean加载的核心了，它是ClassPathXmlApplicationContext的父类AbstractApplicationContext的一个方法，顾名思义，用于刷新整个Spring上下文信息，定义了整个Spring上下文加载的流程。
 　　　　
 refresh方法
 
