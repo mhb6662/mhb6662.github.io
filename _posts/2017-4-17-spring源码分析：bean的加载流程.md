@@ -18,7 +18,7 @@ ClassPathXmlApplicationContext用于加载CLASSPATH下的Spring配置文件，�
 
 <a href="#">
     <img src="{{ site.baseurl }}/img/
-spring01-01.png" alt="Post Sample Image">
+spring01-01.jpg" alt="Post Sample Image">
 </a>
 
 看下ClassPathXmlApplicationContext的构造函数：
@@ -210,7 +210,7 @@ obtainFreshBeanFactory方法的作用是获取刷新Spring上下文的Bean工厂
 
 <a href="#">
     <img src="{{ site.baseurl }}/img/
-spring01-02.png" alt="Post Sample Image">
+spring01-02.jpg" alt="Post Sample Image">
 </a>
 
 
