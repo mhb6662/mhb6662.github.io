@@ -2,13 +2,11 @@
 title: Xin Blog
 header-img: img/home-bg.jpg
 email: guojianxin1992@foxmail.com
-copyright_name: Your/Project/Corporate Name
-description: "Write your site description here. It will be used as your sites meta description as well!"
+copyright_name: XIN Blog
+description: "大家你好!大家再见！"
 baseurl: "/jianxinguo1992.github.io"
 url: "http://guojianxin.top"
-twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  StartBootstrap
+github_username:  guojianxin1992
 email_username:  guojianxin1992@foxmail.com
 
 # Google Analytics
