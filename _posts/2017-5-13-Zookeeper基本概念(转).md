@@ -18,7 +18,7 @@ Zookeeper中的角色主要有以下三类，如下表所示：
 系统模型如图所示：
 
 <a href="#">
-    <img src="{{ site.baseurl }}/img/zookeeper06.png" alt="Post Sample Image">
+    <img src="{{ site.baseurl }}/img/zookeeper06.jpg" alt="Post Sample Image">
 </a>
 
 <h3 class="section-heading">设计目的</h3>
@@ -94,7 +94,7 @@ fast paxos流程是在选举过程中，某Server首先向所有Server提议自�
 流程图如下所示：
 
 <a href="#">
-    <img src="{{ site.baseurl }}/img/zookeeper11.png" alt="Post Sample Image">
+    <img src="{{ site.baseurl }}/img/zookeeper11.jpg" alt="Post Sample Image">
 </a>
 
 
@@ -115,6 +115,7 @@ Leader的工作流程简图如下所示，在实际实现中，流程要比下�
 </a>
 
 Follower工作流程:
+        
         1 .PING消息： 心跳消息；
 
         2 .PROPOSAL消息：Leader发起的提案，要求Follower投票；
