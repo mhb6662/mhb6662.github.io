@@ -1,17 +1,17 @@
 # Site settings
-title: xin blog
-SEOTitle: xin blog
+title: Demon Ma blog
+SEOTitle: Demon Ma blog
 header-img: img/about-bg.jpg
-email: guojianxin1992@foxmail.com
-description: "大家你好"
-keyword: "Blog, Java, JVM, Spring"
-url: "http://jianxinguo1992.github.io"          # your host, for absolute URL
+email: mhbplus666@gmail.com
+description: "你好"
+keyword: "Blog, Java,Psychological"
+url: "http://mhb6662.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/jianxinguo1992/" # you code repository
+github_repo: "https://github.com/mhb6662/" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "人在上海的java coder"
+sidebar-about-description: "北京的孤独求学者"
 sidebar-avatar: /img/me.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -19,7 +19,6 @@ sidebar-avatar: /img/me.jpg      # use absolute URL, seeing it's used in both `/
 # SNS settings
 RSS: false
 # weibo_username:     xxx
-zhihu_username:     guojianxin
 github_username:    
 #facebook_username:  xxx
 jianshu_username:   
